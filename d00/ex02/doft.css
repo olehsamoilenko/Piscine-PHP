@@ -1,0 +1,181 @@
+BODY {
+	background-color: #505050;
+}
+
+DIV.header, DIV.left, DIV.center, DIV.right, DIV.greenbox {
+	position: absolute;
+	border-radius: 10px;
+	box-shadow: 10px 10px 12px;
+}
+
+DIV.header {
+	width: 1420px;
+	height: 137px;
+	background-color: #909090;
+	margin-left: 230px;
+	margin-top: 7px;
+}
+
+DIV.left {
+	width: 140px;
+	height: 425px;
+	background-color: #909090;
+	margin-left: 260px;
+	margin-top: 164px;
+}
+
+DIV.center {
+	width: 1020px;
+	height: 582px;
+	background-color: #909090;
+	margin-left: 430px;
+	margin-top: 164px;
+}
+
+DIV.right {
+	width: 140px;
+	height: 425px;
+	background-color: #909090;
+	margin-left: 1480px;
+	margin-top: 164px;
+}
+
+DIV.greenbox {
+	width: 520px;
+	height: 170px;
+	background-color: #88ff88;
+	margin-left: 185px;
+	margin-top: 670px;
+}
+
+IMG.cluster {
+	width: 1000px;
+	height: 562px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+IMG.d42 {
+	width: 426px;
+	height: 110px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+IMG.loupe {
+	position: absolute;
+	margin-left: 698px;
+	margin-top: 10px;
+}
+
+IMG.reload {
+	position: absolute;
+	height: 20px;
+	margin-left: 954px;
+	margin-top: 10px;
+}
+
+IMG.close {
+	position: absolute;
+	margin-left: 954px;
+	margin-top: 107px;
+}
+
+IMG.arrow {
+	height: 70px;
+	margin-left: 32px;
+	margin-top: 15px;
+}
+
+IMG.main {
+	height: 70px;
+	margin-left: 32px;
+	margin-top: 10px;
+}
+
+IMG.oeil {
+	border: red;
+	border-style: solid;
+	border-radius: 5px;
+	border-width: 5px;
+	height: 65px;
+	margin-left: 27px;
+	margin-top: 5px;
+}
+
+IMG.outil {
+	height: 70px;
+	margin-left: 32px;
+	margin-top: 5px;
+}
+
+IMG.chat {
+	height: 68px;
+	margin-left: 32px;
+	margin-top: 10px;
+}
+
+IMG.book {
+	height: 96px;
+	margin-left: 35px;
+	margin-top: 15px;
+}
+
+IMG.towel {
+	height: 52px;
+	margin-left: 35px;
+	margin-top: 10px;
+}
+
+DIV.brick {
+	background-image: url(resources/brick.jpg);
+	width: 120px;
+	height: 70px;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+DIV.text {
+	margin-top: 7px;
+	margin-left: 10px;
+	font-family: Verdana;
+	letter-spacing: -0.06px;
+}
+
+SPAN.large {
+	font-size: 31px;
+}
+
+SPAN.shadow {
+	letter-spacing: 0.16px;
+	text-shadow: 5px 5px 5px #ff0000;
+}
+
+SPAN.italic {
+	line-height: 20px;
+	letter-spacing: -0.16px;
+	font-style: italic;
+	margin-left: -2px;
+	margin-top: -2px;
+}
+
+FORM INPUT[type="text"] {
+	border: 2px solid #eeeeee;
+	border-left-color: #9d9d9d;
+	border-top-color: #9d9d9d;
+	margin-left: 2px;
+	width: 382px;
+	height: 21px;
+}
+
+FORM INPUT[type="submit"] {
+	width: 78px;
+	height: 20px;
+	font-size: 12px;
+	letter-spacing: 0.55px;
+	background: -webkit-linear-gradient(top, #f3f1f2 0%,#dadada 100%);
+	font-family: Verdana;
+	border: 1px solid #a8a4a5;
+	border-radius: 1px;
+	margin-left: 2px;
+}

@@ -1,0 +1,58 @@
+TABLE TD {
+	width: 5vmin;
+	height: 5vmin;
+}
+
+DIV.element {
+	text-align: center;
+	font-weight: bold;
+	font-size: 2.4vmin;
+}
+DIV.number {
+	text-align: left;
+	font-size: 1.0vmin;
+}
+DIV.weight {
+	text-align: right;
+	font-size: 1.0vmin;
+}
+TD.group {
+	text-align: center;
+	font-size: 1.2vmin;
+}
+
+.skip {
+	width: 2vmin;
+	height: 2vmin;
+}
+
+TD.red {
+	background-color: red;
+}
+TD.cyan {
+	background-color: cyan;
+}
+TD.yellow {
+	background-color: yellow;
+}
+TD.khaki {
+	background-color: khaki;
+}
+TD.darkkhaki {
+	background-color: darkkhaki;
+}
+TD.darkgrey {
+	background-color: darkgrey;
+}
+TD.coral {
+	background-color: coral;
+}
+TD.lightgray {
+	background-color: lightgray;
+}
+TD.hotpink {
+	background-color: hotpink;
+}
+TD.mediumvioletred {
+	background-color: mediumvioletred;
+}
