@@ -1,22 +1,22 @@
-TABLE TD {
+table td {
 	width: 5vmin;
 	height: 5vmin;
 }
 
-DIV.element {
+div.element {
 	text-align: center;
 	font-weight: bold;
 	font-size: 2.4vmin;
 }
-DIV.number {
+div.number {
 	text-align: left;
 	font-size: 1.0vmin;
 }
-DIV.weight {
+div.weight {
 	text-align: right;
 	font-size: 1.0vmin;
 }
-TD.group {
+td.group {
 	text-align: center;
 	font-size: 1.2vmin;
 }
@@ -26,33 +26,33 @@ TD.group {
 	height: 2vmin;
 }
 
-TD.red {
+td.red {
 	background-color: red;
 }
-TD.cyan {
+td.cyan {
 	background-color: cyan;
 }
-TD.yellow {
+td.yellow {
 	background-color: yellow;
 }
-TD.khaki {
+td.khaki {
 	background-color: khaki;
 }
-TD.darkkhaki {
+td.darkkhaki {
 	background-color: darkkhaki;
 }
-TD.darkgrey {
+td.darkgrey {
 	background-color: darkgrey;
 }
-TD.coral {
+td.coral {
 	background-color: coral;
 }
-TD.lightgray {
+td.lightgray {
 	background-color: lightgray;
 }
-TD.hotpink {
+td.hotpink {
 	background-color: hotpink;
 }
-TD.mediumvioletred {
+td.mediumvioletred {
 	background-color: mediumvioletred;
 }

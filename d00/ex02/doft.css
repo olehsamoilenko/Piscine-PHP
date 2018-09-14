@@ -1,14 +1,14 @@
-BODY {
+body {
 	background-color: #505050;
 }
 
-DIV.header, DIV.left, DIV.center, DIV.right, DIV.greenbox {
+div.header, div.left, div.center, div.right, div.greenbox {
 	position: absolute;
 	border-radius: 10px;
 	box-shadow: 10px 10px 12px;
 }
 
-DIV.header {
+div.header {
 	width: 1420px;
 	height: 137px;
 	background-color: #909090;
@@ -16,7 +16,7 @@ DIV.header {
 	margin-top: 7px;
 }
 
-DIV.left {
+div.left {
 	width: 140px;
 	height: 425px;
 	background-color: #909090;
@@ -24,7 +24,7 @@ DIV.left {
 	margin-top: 164px;
 }
 
-DIV.center {
+div.center {
 	width: 1020px;
 	height: 582px;
 	background-color: #909090;
@@ -32,7 +32,7 @@ DIV.center {
 	margin-top: 164px;
 }
 
-DIV.right {
+div.right {
 	width: 140px;
 	height: 425px;
 	background-color: #909090;
@@ -40,7 +40,7 @@ DIV.right {
 	margin-top: 164px;
 }
 
-DIV.greenbox {
+div.greenbox {
 	width: 520px;
 	height: 170px;
 	background-color: #88ff88;
@@ -48,52 +48,52 @@ DIV.greenbox {
 	margin-top: 670px;
 }
 
-IMG.cluster {
+img.cluster {
 	width: 1000px;
 	height: 562px;
 	margin-left: 10px;
 	margin-top: 10px;
 }
 
-IMG.d42 {
+img.d42 {
 	width: 426px;
 	height: 110px;
 	margin-left: 10px;
 	margin-top: 10px;
 }
 
-IMG.loupe {
+img.loupe {
 	position: absolute;
 	margin-left: 698px;
 	margin-top: 10px;
 }
 
-IMG.reload {
+img.reload {
 	position: absolute;
 	height: 20px;
 	margin-left: 954px;
 	margin-top: 10px;
 }
 
-IMG.close {
+img.close {
 	position: absolute;
 	margin-left: 954px;
 	margin-top: 107px;
 }
 
-IMG.arrow {
+img.arrow {
 	height: 70px;
 	margin-left: 32px;
 	margin-top: 15px;
 }
 
-IMG.main {
+img.main {
 	height: 70px;
 	margin-left: 32px;
 	margin-top: 10px;
 }
 
-IMG.oeil {
+img.oeil {
 	border: red;
 	border-style: solid;
 	border-radius: 5px;
@@ -103,31 +103,31 @@ IMG.oeil {
 	margin-top: 5px;
 }
 
-IMG.outil {
+img.outil {
 	height: 70px;
 	margin-left: 32px;
 	margin-top: 5px;
 }
 
-IMG.chat {
+img.chat {
 	height: 68px;
 	margin-left: 32px;
 	margin-top: 10px;
 }
 
-IMG.book {
+img.book {
 	height: 96px;
 	margin-left: 35px;
 	margin-top: 15px;
 }
 
-IMG.towel {
+img.towel {
 	height: 52px;
 	margin-left: 35px;
 	margin-top: 10px;
 }
 
-DIV.brick {
+div.brick {
 	background-image: url(resources/brick.jpg);
 	width: 120px;
 	height: 70px;
@@ -135,23 +135,23 @@ DIV.brick {
 	margin-top: 5px;
 }
 
-DIV.text {
+div.text {
 	margin-top: 7px;
 	margin-left: 10px;
 	font-family: Verdana;
 	letter-spacing: -0.06px;
 }
 
-SPAN.large {
+span.large {
 	font-size: 31px;
 }
 
-SPAN.shadow {
+span.shadow {
 	letter-spacing: 0.16px;
 	text-shadow: 5px 5px 5px #ff0000;
 }
 
-SPAN.italic {
+span.italic {
 	line-height: 20px;
 	letter-spacing: -0.16px;
 	font-style: italic;
@@ -159,7 +159,7 @@ SPAN.italic {
 	margin-top: -2px;
 }
 
-FORM INPUT[type="text"] {
+form input[type="text"] {
 	border: 2px solid #eeeeee;
 	border-left-color: #9d9d9d;
 	border-top-color: #9d9d9d;
@@ -168,7 +168,7 @@ FORM INPUT[type="text"] {
 	height: 21px;
 }
 
-FORM INPUT[type="submit"] {
+form input[type="submit"] {
 	width: 78px;
 	height: 20px;
 	font-size: 12px;

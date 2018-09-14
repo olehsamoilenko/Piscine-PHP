@@ -1,0 +1,50 @@
+ul {
+	font-family: Arial;
+	list-style-type: none;
+	padding: 0px;
+	overflow: hidden;
+	background-color: grey;
+}
+
+li {
+	float: left;
+}
+
+a {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	min-width: 120px;
+}
+
+a:hover {
+	background-color: black;
+}
+
+.drop {
+	display: none;
+	position: absolute;
+	background-color: white;
+}
+
+.drop a {
+	display: block;
+	color: black;
+	text-decoration: none;
+	text-align: left;
+}
+
+.drop a:hover {
+	background-color: lightgrey;
+	transform: scale(1.05);
+}
+
+.menu:hover .drop {
+	display: block;
+}
+
+body {
+	background-image: url(duck.webp)
+}
