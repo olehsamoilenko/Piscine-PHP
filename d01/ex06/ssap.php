@@ -1,6 +1,5 @@
 #!/usr/bin/php
 <?php
-// set_include_path("../ex03/");
 include __DIR__ . "/../ex03/ft_split.php";
 
 $arr = array();

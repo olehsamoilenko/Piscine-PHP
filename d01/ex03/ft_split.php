@@ -1,11 +1,18 @@
 <?php
 function ft_split($str) {
 	$str = trim($str);
-	if ($str == "") {
-		return (array());
+	while (strstr($str, "  ")) {
+		$str = str_ireplace("  ", " ", $str);
 	}
-	$arr = preg_split("/ +/", $str);
+	if ($str != "") {
+		$arr = explode(' ', $str);
+	}
+	else {
+		$arr = array();
+	}
 	sort($arr);
+	// print_r($arr);
 	return ($arr);
 }
+// ft_split(" ");
 ?>

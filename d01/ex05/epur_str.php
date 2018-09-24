@@ -1,5 +1,8 @@
 #!/usr/bin/php
 <?php
-$str = preg_replace("/ +/", " ", trim($argv[1]));
+$str = trim($argv[1]);
+while (strstr($str, "  ")) {
+	$str = str_ireplace("  ", " ", $str);
+}
 print_r("$str\n");
 ?>
