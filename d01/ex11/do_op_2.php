@@ -1,23 +1,18 @@
 #!/usr/bin/php
 <?php
-function correct_operation($op) {
-	if ($op != '+' && $op != '-' && $op != '*' && $op != '/' && $op != '%')
-		return (FALSE);
-	else
-		return (TRUE);
-}
-
-if ($argc != 2) {
-	print("Incorrect Parameters\n");
-	exit();
-}
-$str = str_replace(" ", "", $argv[1]);
-list($a, $op, $b) = sscanf($str, "%d%c%d");
-if (!is_numeric($a) || !correct_operation($op) || !is_numeric($b)) {
-	print("Syntax Error\n");
+function error($message) {
+	print("$message\n");
 	exit;
 }
-switch ($op) {
+if ($argc != 2)
+	error("Incorrect Parameters");
+$str = str_replace(" ", "", $argv[1]);
+$index = strpos($str, '+') + strpos($str, '-') + strpos($str, '*') + strpos($str, '/') + strpos($str, '%');
+$a = substr($str, 0, $index);
+$b = substr($str, $index + 1);
+if (!is_numeric($a) || !is_numeric($b))
+	error("Syntax Error");
+switch ($str[$index]) {
 	case '+':
 		$res = $a + $b;
 		break;
@@ -28,12 +23,15 @@ switch ($op) {
 		$res = $a * $b;
 		break;
 	case '/':
+		if ($b == 0)
+			error("Dividing by zero");
 		$res = $a / $b;
 		break;
 	case '%':
+		if ($b == 0)
+			error("Dividing by zero");
 		$res = $a % $b;
 		break;
 }
 print("$res\n");
-// NOT FINISHED
 ?>
