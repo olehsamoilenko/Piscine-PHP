@@ -13,30 +13,38 @@ function is_alpha($a) {
 
 function is_bigger($a, $b) {
 	if (is_alpha($a)) {
-		if (is_alpha($b) && ord(strtolower($a)) - ord(strtolower($b)) > 0)
+		if (is_alpha($b) && ord(strtolower($a)) - ord(strtolower($b)) > 0) {
 			return (TRUE);
-		else // alpha is smaller then number or symbol
+		}
+		else { /* alpha is smaller then number or symbol */
 			return (FALSE);
+		}
 	}
 	else if (is_numeric($a)) {
-		if (is_alpha($b) || is_numeric($b) && $a > $b)
+		if (is_alpha($b) || is_numeric($b) && $a > $b) {
 			return (TRUE);
-		else // alpha is smaller then symbol
+		}
+		else { /* alpha is smaller then symbol */
 			return (FALSE);
+		}
 	}
-	else if (is_alpha($b) || is_numeric($b) || $a > $b) // a is symbol
+	else if (is_alpha($b) || is_numeric($b) || $a > $b) { /* a is symbol */
 		return (TRUE);
-	else
+	}
+	else {
 		return (FALSE);
+	}
 }
 
 function str_bigger($a, $b) {
 	$i = 0;
 	while (true) {
-		if (ord($a[$i]) != 0 && ord($b[$i]) == 0)
+		if (ord($a[$i]) != 0 && ord($b[$i]) == 0) {
 			return (TRUE);
-		else if (ord($a[$i]) == 0)
+		}
+		else if (ord($a[$i]) == 0) {
 			return (FALSE);
+		}
 		if (ord($a[$i]) - ord($b[$i]) != 0) {
 			return (is_bigger($a[$i], $b[$i]));
 		}

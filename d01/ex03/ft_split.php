@@ -11,8 +11,6 @@ function ft_split($str) {
 		$arr = array();
 	}
 	sort($arr);
-	// print_r($arr);
 	return ($arr);
 }
-// ft_split(" ");
 ?>

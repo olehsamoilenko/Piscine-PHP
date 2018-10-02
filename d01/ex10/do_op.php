@@ -5,8 +5,9 @@ function error($message) {
 	exit;
 }
 
-if ($argc != 4)
+if ($argc != 4) {
 	error("Incorrect Parameters");
+}
 $op = trim($argv[2]);
 switch ($op) {
 	case '+':
@@ -27,6 +28,9 @@ switch ($op) {
 		if ($argv[3] == 0)
 			error("Dividing by zero");
 		$res = $argv[1] % $argv[3];
+		break;
+	default:
+		error("Incorrect Parameters");
 		break;
 }
 print("$res\n");

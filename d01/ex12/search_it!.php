@@ -2,9 +2,10 @@
 <?php
 for ($i = 2; $i < $argc; $i++) {
 	$elem = explode(':', $argv[$i]);
-	if ($elem[0] == $argv[1])
+	if ($elem[0] === $argv[1])
 		$res = $elem[1];
 }
-if ($res != NULL)
+if ($res != NULL) {
 	print("$res\n");
+}
 ?>
