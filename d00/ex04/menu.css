@@ -46,5 +46,6 @@ a:hover {
 }
 
 body {
-	background-image: url(https://media3.giphy.com/media/e8n2clEN45Yre/giphy.gif?cid=3640f6095bb1fd9e583333766f1201a7)
+	background: url(https://github.com/olehsamoilenko/resources/blob/master/Piscine-PHP/d00/ex04/duck.gif?raw=true);
+	background-size: cover;
 }
