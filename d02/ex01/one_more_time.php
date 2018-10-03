@@ -1,5 +1,6 @@
 #!/usr/bin/php
 <?php
+date_default_timezone_set('Europe/Paris');
 $str = $argv[1];
 $day = "([Ll]undi|[Mm]ardi|[Mm]ercredi|[Jj]eudi|[Vv]endredi|[Ss]amedi|[Dd]imanche)";
 $month = "([Jj]anvier|[Ff]évrier|[Mm]ars|[Aa]vril|[Mm]ai|[Jj]uin|[Jj]uillet|[Aa]oût|[Ss]eptembre|[Oo]ctobre|[Nn]ovembre|[Dd]écembre)";

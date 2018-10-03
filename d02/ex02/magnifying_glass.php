@@ -1,32 +1,22 @@
 #!/usr/bin/php
 <?php
-// $fd = fopen($argv[1], "r");
-// while ($line = fgets(($fd))) {
-// 	$line = preg_replace_callback("/title=\".*\"/",
-// 	function ($matches) {
-// 		print_r($matches);
-// 		$str = $matches[0];
-		
-// 		// $title = substr($str, 0, stripos($str, '"'));
-// 		// $link = strtoupper(substr($str, stripos($str, '"')));
-// 		// $matches[0] = $title.$link;
-// 		// return ($matches);
-// 	},
-// 	$line);
-// 	print("$line");
-// }
-
+if (!file_exists($argv[1]))
+	exit;
 $str = file_get_contents($argv[1]);
-$tags = preg_split("#/a#", $str);
-print_r($tags);
-foreach ($tags as $value) {
-
-}
-// preg_replace_callback("/title *= *\".*\"/ is",
-// 	function ($matches) {
-// 		print_r($matches);
-// 	}, $str);
-
-// </A> TABLE TABLE = "  start  
-   // end"
+$str = preg_replace_callback("#<a.*</a\s*>#si",
+			function ($match) {
+				$str = preg_replace_callback("#>[^<]*<#",
+							function ($match) {
+								return (strtoupper($match[0]));
+							}, $match[0]);
+				$str = preg_replace_callback("#title\s*=\s*\"[^\"]*\"#si",
+							function ($match) {
+								$pos = strpos($match[0], '"');
+								$title = substr($match[0], 0, $pos);
+								$text = substr($match[0], $pos);
+								return ($title.strtoupper($text));
+							}, $str);
+				return ($str);
+			}, $str);
+print($str);
 ?>
