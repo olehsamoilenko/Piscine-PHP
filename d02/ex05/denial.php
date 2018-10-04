@@ -14,21 +14,24 @@
 	$key_number = array_search($argv[2], $arr[0]);
 	if ($key_number === FALSE)
 		exit;
-	for ($i = 1; $i < count($arr); $i++) {
-		$key = $arr[$i][$key_number];
-		$nom[$key] = $arr[$i][0];
-		$prenom[$key] = $arr[$i][1];
-		$mail[$key] = $arr[$i][2];
-		$IP[$key] = $arr[$i][3];
-		$pseudo[$key] = $arr[$i][4];
-	}
-	while (true) {
-		echo "Enter your command: ";
-		$command = fgets(STDIN);
-		if ($command == null) {
-			echo "\n";
-			break ;
-		}
-		eval($command);
-	}
+	$name = "nom";
+	$$name = $arr[$i][0];
+	echo $nom."\n";
+	// for ($i = 1; $i < count($arr); $i++) {
+	// 	$key = $arr[$i][$key_number];
+	// 	$nom[$key] = $arr[$i][0];
+	// 	$prenom[$key] = $arr[$i][1];
+	// 	$mail[$key] = $arr[$i][2];
+	// 	$IP[$key] = $arr[$i][3];
+	// 	$pseudo[$key] = $arr[$i][4];
+	// }
+	// while (true) {
+	// 	echo "Enter your command: ";
+	// 	$command = fgets(STDIN);
+	// 	if ($command == null) {
+	// 		echo "\n";
+	// 		break ;
+	// 	}
+	// 	eval($command);
+	// }
 ?>
