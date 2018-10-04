@@ -14,24 +14,26 @@
 	$key_number = array_search($argv[2], $arr[0]);
 	if ($key_number === FALSE)
 		exit;
-	$name = "nom";
-	$$name = $arr[$i][0];
-	echo $nom."\n";
-	// for ($i = 1; $i < count($arr); $i++) {
-	// 	$key = $arr[$i][$key_number];
-	// 	$nom[$key] = $arr[$i][0];
-	// 	$prenom[$key] = $arr[$i][1];
-	// 	$mail[$key] = $arr[$i][2];
-	// 	$IP[$key] = $arr[$i][3];
-	// 	$pseudo[$key] = $arr[$i][4];
-	// }
-	// while (true) {
-	// 	echo "Enter your command: ";
-	// 	$command = fgets(STDIN);
-	// 	if ($command == null) {
-	// 		echo "\n";
-	// 		break ;
-	// 	}
-	// 	eval($command);
-	// }
+	$field0 = $arr[0][0]; /* nom */
+	$field1 = $arr[0][1]; /* prenom */
+	$field2 = $arr[0][2]; /* mail */
+	$field3 = $arr[0][3]; /* IP */
+	$field4 = $arr[0][4]; /* pseudo */
+	for ($i = 1; $i < count($arr); $i++) {
+		$key = $arr[$i][$key_number];
+		$$field0[$key] = $arr[$i][0];
+		$$field1[$key] = $arr[$i][1];
+		$$field2[$key] = $arr[$i][2];
+		$$field3[$key] = $arr[$i][3];
+		$$filed4[$key] = $arr[$i][4];
+	}
+	while (true) {
+		echo "Enter your command: ";
+		$command = fgets(STDIN);
+		if ($command == null) {
+			echo "\n";
+			break ;
+		}
+		eval($command);
+	}
 ?>
