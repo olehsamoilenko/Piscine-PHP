@@ -1,0 +1,1 @@
+DELETE FROM ft_table LIMIt 5;
