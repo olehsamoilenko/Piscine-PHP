@@ -6,6 +6,7 @@
 	}
 	else {
 		header("WWW-Authenticate: Basic realm=''Member area''");
+		header("Connection: close");
 		echo "<html><body>That area is accessible for members only</body></html>\n";
 	}
 ?>
