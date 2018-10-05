@@ -1,5 +1,5 @@
 <?php
-	if ($_POST["login"] != "" && $_POST["passwd"] != "" && $_POST["submit"] == "OK") {
+	if ($_POST["login"] != NULL && $_POST["passwd"] != NULL && $_POST["submit"] == "OK") {
 		if (!file_exists("../private")) {
 			mkdir("../private");
 		}
