@@ -1,1 +1,1 @@
-DELETE FROM ft_table LIMIt 5;
+DELETE FROM ft_table LIMIT 5;
