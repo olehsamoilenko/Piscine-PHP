@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        input{
+            border: 2px solid #1e5799;
+        }
+        #btn:hover{
+            background: #7db9e8;
+
+
+        }
+        .form_reg {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class = "form_reg">
+    <form action="create_account.php" method="post">
+        <table>
+            <tr>
+                <td>
+                    Login
+                </td>
+                <td>
+                    <input type="login" name="login" id="login" required maxlength="50">
+                </td>
+            </tr>
+            <!-- <tr>
+                <td>
+                    Email
+                </td>
+                <td>
+                    <input type="email" login="email" id="email" required maxlength="50">
+                </td>
+            </tr> -->
+            <tr>
+                <td>
+                    Password
+                </td>
+                <td>
+                    <input type="password" name="password" id="password" required maxlength="50">
+                </td>
+            </tr>
+        </table>
+        <button type="submit" name="submit" value="OK">Submit</button>
+    </form>
+</div>
+</body>
+</html>
