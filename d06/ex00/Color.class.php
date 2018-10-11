@@ -5,22 +5,26 @@ class Color {
 	public	$green;
 	public	$blue;
 
-	function __construct($arr) {
-		if (array_key_exists('rgb', $arr)) {
-			$this->red = intval($arr['rgb']) / 65281 % 256;
-			$this->green = intval($arr['rgb']) / 256 % 256;
-			$this->blue = intval($arr['rgb']) % 256;
+	function __toString() {
+		return (sprintf("Color( red: %3d, green: %3d, blue: %3d )",
+			$this->red, $this->green, $this->blue));
+	}
+
+	function __construct($kwargs) {
+		if (array_key_exists('rgb', $kwargs)) {
+			$this->red = (intval($kwargs['rgb']) & 0xff0000) >> 16;
+			$this->green = (intval($kwargs['rgb']) & 0xff00) >> 8;
+			$this->blue = intval($kwargs['rgb']) & 0xff;
 		}
-		else if (array_key_exists('red', $arr) &&
-		array_key_exists('green', $arr) &&
-		array_key_exists('blue', $arr)) {
-			$this->red = intval($arr['red']);
-			$this->green = intval($arr['green']);
-			$this->blue = intval($arr['blue']);
+		else if (array_key_exists('red', $kwargs) &&
+		array_key_exists('green', $kwargs) &&
+		array_key_exists('blue', $kwargs)) {
+			$this->red = intval($kwargs['red']);
+			$this->green = intval($kwargs['green']);
+			$this->blue = intval($kwargs['blue']);
 		}
 		if (self::$verbose == TRUE) {
-			printf("Color( red: %3d, green: %3d, blue: %3d ) constructed.\n",
-			$this->red, $this->green, $this->blue);
+			echo $this . ' constructed.' . PHP_EOL;
 		}
 	}
 
@@ -44,18 +48,12 @@ class Color {
 
 	public static function doc() {
 		$doc = file_get_contents(__DIR__ . "/Color.doc.txt");
-		echo PHP_EOL . $doc . PHP_EOL;
-	}
-
-	function __toString() {
-		return (sprintf("Color( red: %3d, green: %3d, blue: %3d )",
-			$this->red, $this->green, $this->blue));
+		echo $doc . PHP_EOL;
 	}
 
 	function __destruct() {
 		if (self::$verbose == TRUE) {
-			printf("Color( red: %3d, green: %3d, blue: %3d ) destructed.\n",
-			$this->red, $this->green, $this->blue);
+			echo $this . ' destructed.' . PHP_EOL;
 		}
 	}
 }

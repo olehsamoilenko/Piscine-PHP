@@ -1,4 +1,3 @@
-#!/usr/bin/php
 <?php
 /* ************************************************************************** */
 /*                                                                            */
@@ -9,7 +8,7 @@
 /* ************************************************************************** */
 
 
-require_once 'Color.class.php';
+require_once __DIR__ . '/../ex00/Color.class.php';
 require_once 'Vertex.class.php';
 
 Color::$verbose = False;
