@@ -1,65 +1,66 @@
 <html>
 	<head>
+		<script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
 		<script>
-			window.onload = function() {
-				setInterval(function() {
-					alert('Please, use me...');
-				}, 30000)
-			}
+			$(document).ready(function() {
+				setInterval(function() { alert('Please, use me...'); }, 30000);
 
-			function calculate(form) {
-				var left = Number(document.getElementById('left').value);
-				var rigth = Number(document.getElementById('right').value);
-				if (Number.isInteger(left) && Number.isInteger(rigth) && left >= 0 && rigth >= 0) {
-					var operation = document.getElementById('operation').value;
-					switch (operation) {
-						case '+':
-							message = left + rigth;
-							break;
-						case '-':
-							message = left - rigth;
-							break;
-						case '*':
-							message = left * rigth;
-							break;
-						case '/':
-							if (rigth != 0) {
-								message = left / rigth;
-							}
-							else {
-								message = 'It’s over 9000!';
-							}
-							break;
-						case '%':
-							if (rigth != 0) {
-								message = left % rigth;
-							}
-							else {
-								message = 'It’s over 9000!';
-							}
-							break;
+				$('#btn').click(function() {
+					if ($('#left').val() != '') {
+						var left = Number($('#left').val());
 					}
-				}
-				else {
-					message = 'Error :(';
-				}
-				console.log(message);
-				alert(message);
-			}
+					if ($('#right').val() != '') {
+						var rigth = Number($('#right').val());
+					}
+					if (Number.isInteger(left) && Number.isInteger(rigth) && left >= 0 && rigth >= 0) {
+						var operation = $('#operation').val();
+						switch (operation) {
+							case '+':
+								message = left + rigth;
+								break;
+							case '-':
+								message = left - rigth;
+								break;
+							case '*':
+								message = left * rigth;
+								break;
+							case '/':
+								if (rigth != 0) {
+									message = left / rigth;
+								}
+								else {
+									message = 'It\'s over 9000!';
+								}
+								break;
+							case '%':
+								if (rigth != 0) {
+									message = left % rigth;
+								}
+								else {
+									message = 'It\'s over 9000!';
+								}
+								break;
+						}
+					}
+					else {
+						message = 'Error :(';
+					}
+					console.log(message);
+					alert(message);
+				});
+			});
 		</script>
 	</head>
 	<body>
-		<form onsubmit='calculate(this)'>
-			<input id='left'>
-			<select id='operation'>
-				<option value='+'>+</option>
-				<option value='-'>-</option>
-				<option value='*'>*</option>
-				<option value='/'>/</option>
-				<option value='%'>%</option>
-			</select>
-			<input id='right'>
-			<input id='submit' type='submit' value='Try me!'>
-		</form>
+		<input id='left'>
+		<select id='operation'>
+			<option value='+'>+</option>
+			<option value='-'>-</option>
+			<option value='*'>*</option>
+			<option value='/'>/</option>
+			<option value='%'>%</option>
+		</select>
+		<input id='right'>
+		<button id='btn'>Try me!</button>
 	</body>
 </htmL>

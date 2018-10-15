@@ -1,10 +1,11 @@
 <html>
 	<head>
+		<script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
 		<style>
 			#balloon {
 				width: 200px;
 				height: 200px;
-				background: red;
+				background-color: red;
 				position: absolute;
 				top: 50%;
 				left: 50%;
@@ -13,44 +14,46 @@
 				border-radius: 50%;
 			}
 		</style>
+		
 	</head>
 	<body>
 		<div id='balloon'></div>
-		<script>
-			var color = 0;
-			var size = 200;
-			var balloon = document.getElementById('balloon');
-			
-			balloon.addEventListener('click', function() {
-				size += 10;
-				if (size > 420) {
-					size = 200;
-				}
-				color = (color + 1) % 3;
-				resize();
+		<script type='text/javascript'>
+			$(document).ready(function() {
+				var color = 0;
+				$('#balloon').click(function() {
+					$('#balloon').css('width', '+=10');
+					$('#balloon').css('height', '+=10');
+					if ($('#balloon').width() > 420) {
+						$('#balloon').css('width', 200);
+						$('#balloon').css('height', 200);
+					}
+					color = (color + 1) % 3;
+					change(color);
+				});
+
+				$('#balloon').mouseout(function() {
+					if ($('#balloon').width() >= 205) {
+						$('#balloon').css('width', '-=5');
+						$('#balloon').css('height', '-=5');
+					}
+					color = (color + 2) % 3;
+					change(color);
+				});
 			});
 
-			balloon.addEventListener('mouseout', function() {
-				if (size >= 205)
-					size -= 5;
-				color = (color + 2) % 3;
-				resize();
-			})
-
-			function resize() {
-				balloon.style.width = size;
-				balloon.style.height = size;
-				balloon.style.marginLeft = -size / 2;
-				balloon.style.marginTop = -size / 2;
+			function change(color) {
+				$('#balloon').css('margin-left', -parseInt($('#balloon').css('width')) / 2);
+				$('#balloon').css('margin-top', -parseInt($('#balloon').css('height')) / 2);
 				switch (color) {
 					case 0:
-						balloon.style.background = 'red';
+						$('#balloon').css('background-color', 'green');
 						break;
 					case 1:
-						balloon.style.background = 'green';
+						$('#balloon').css('background-color', 'blue');
 						break;
 					case 2:
-						balloon.style.background = 'blue';
+						$('#balloon').css('background-color', 'red');
 						break;
 				}
 			}
