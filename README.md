@@ -7,15 +7,15 @@ todo ex08: array descending sort
 todo ex09: incorrect sort with '_toto' and '_TOT0'
 ```
 ### [Day 02](https://cdn.intra.42.fr/pdf/pdf/978/d02.en.pdf) - MORE PHP ```102/100```
-### [Day 03](https://projects.intra.42.fr/uploads/document/document/420/d03.en.pdf) - PAMP ```100/100```
-```
-todo ex06: wrong password
-```
-### [Day 04](https://cdn.intra.42.fr/pdf/pdf/980/d04.en.pdf) - USER SESSION ```?/100```
 ```
 todo ex04: error handling without argument
 todo ex05: error handling incorrect expression
 ```
+### [Day 03](https://projects.intra.42.fr/uploads/document/document/420/d03.en.pdf) - PAMP ```100/100```
+```
+todo ex06: wrong password
+```
+### [Day 04](https://cdn.intra.42.fr/pdf/pdf/980/d04.en.pdf) - USER SESSION ```60/100```
 ### [Rush00](https://cdn.intra.42.fr/pdf/pdf/986/rush00.en.pdf) - ft_minishop ```88/100```
 ```
 todo: problems with session, incompleme login/registration system
@@ -32,4 +32,9 @@ todo ex03: incomplete Matrix class
 todo ex01: wrong message with % by 0
 todo ex04: key uniqueness after refreshing
 ```
-### [Rush01](https://cdn.intra.42.fr/pdf/pdf/987/rush01.en.pdf) - Awesome Starships Battles ```?/100```
+### [Rush01](https://cdn.intra.42.fr/pdf/pdf/987/rush01.en.pdf) - Awesome Starships Battles ```63/100```
+```
+todo: ship move over the top border
+todo: weapon is not a class
+todo: incomplete login/registration system
+```
